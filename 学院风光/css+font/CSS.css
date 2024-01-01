@@ -30,7 +30,7 @@ body {
     -30vmax -10vmax,
     50vmax 50vmax;
   background-repeat: no-repeat;
-  animation: 5s movement linear infinite;
+  animation: 4s movement linear infinite;
 }
 
 .qingchumohu{

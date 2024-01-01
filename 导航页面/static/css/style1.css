@@ -125,7 +125,7 @@ nav .indicator {
   margin: 6px 0 18px 0;
 }
 
-/* 关注按钮 */
+/* 按钮 */
 .follow-btn {
   justify-self: end;
   height: 30px;
@@ -133,7 +133,7 @@ nav .indicator {
   border: none;
   color: white;
   padding: 0 27px;
-  border-radius: 4px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,16 +192,20 @@ nav .indicator {
   left: auto;
   right: 0;
   width: 100%;
+  border-radius: 5px;
 }
 .btn-16:active {
   top: 2px;
+  border-radius: 5px;
 }
 
+/*设置图标间距*/
 
 /* 关注按钮的加号 */
 .follow-btn .fas {
   font-size: 10px;
   margin-right: 6px;
+  
 }
 
 /* 关于我部分 */
