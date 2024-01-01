@@ -1,0 +1,281 @@
+@import url("css.css");
+
+
+:root {
+  /* 主蓝色，按钮，社交图标 */
+  --primary-color: #fddfdd;
+  /* 主蓝色，深，导航 */
+  --primary-dark-color: #7fcaff;
+  --text-color-gray: rgb(255, 255, 255);
+  --text-color-light-gray: #c1c7cb;
+  --text-color-dark-gray: #c4e0f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: "Raleway", "PingFang SC",
+    "Microsoft Yahei", sans-serif;
+}
+
+.wrapper {
+  /* 栅格布局，居中卡片 */
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.profile-card {
+  display: grid;
+  /* 每个列之间的空隙是12px */
+  column-gap: 12px;
+  /* 卡片总宽度为627px */
+  width: 600px;
+  /* 卡片总高度为374px */
+  height: 374px;
+
+  box-shadow: 0px 0px 22px 3px rgba(0, 0, 0, 0.18);
+}
+
+.profile-image {
+  /* 图片占5列 */
+  grid-column: 8 / 13;
+  max-width: 238px;
+  height: 100%;
+  /* 隐藏图片超出区域 */
+  overflow: hidden;
+  /* 垂直为靠上对齐 */
+  align-self: center;
+  /* 水平为靠右对齐 */
+  justify-self: end;
+  margin-right: 20px;
+}
+
+.profile-image img {
+  /* 图片放大，然后只显示一部分 */
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  /* 左边内容占7列 */
+  grid-column: 1 / 8;
+  padding: 38px 28px 20px 33px;
+  position: relative;
+}
+
+nav {
+  margin-bottom: 24px;
+  display: flex;
+  position: relative;
+}
+
+nav a {
+  color: var(--text-color-gray);
+  text-decoration: none;
+}
+
+nav a.active {
+  color: var(--primary-dark-color);
+}
+
+nav a:not(:last-child) {
+  margin-right: 40px;
+}
+
+nav .indicator {
+  height: 2px;
+  background: var(--primary-dark-color);
+  bottom: -7px;
+  left: 0;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.content section {
+  /* 堆叠个人简介和工作经历部分 */
+  position: absolute;
+  /* 默认都不显示  */
+  opacity: 0;
+  /* 淡出淡入效果 */
+  transition: 0.3s ease-out;
+}
+
+.content section.active-section {
+  /* 显示active-section */
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 名字、身份与关注按钮左右布局，各占一列，子栅格不受父栅格影响，是个全新的栅格布局 */
+.personal-info {
+  display: grid;
+}
+/* 名字 */
+.title h1 {
+  font-size: 2em;
+}
+/* 身份 */
+.title p {
+  color: var(--text-color-gray);
+  font-size: 1em;
+  margin: 6px 0 18px 0;
+}
+
+/* 关注按钮 */
+.follow-btn {
+  justify-self: end;
+  height: 30px;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0 27px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px;
+}
+
+.aa{
+  margin: 0px;
+  font-size: 25px;
+}
+
+/* 动效按钮部分 */
+.custom-btn {
+  margin: 5px;
+  color: #fff;
+  border-radius: 5px;
+  max-width: 100%;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-16 {
+  border: none;
+  color: #ffffff;
+  z-index: 3;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-16:hover {
+  color: #86ccff;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
+}
+
+
+/* 关注按钮的加号 */
+.follow-btn .fas {
+  font-size: 10px;
+  margin-right: 6px;
+}
+
+/* 关于我部分 */
+.about-me {
+  color: var(--text-color-dark-gray);
+  font-weight: 300;
+  text-align: justify;
+  z-index: 2;
+}
+
+/* 社交按钮部分 */
+footer {
+  margin-top: 70px;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
+footer .fab {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+/* ********************************* */
+
+/* 工作经历，一共3条工作经历，所以创建了3行栅格布局 */
+.work-exps {
+  color: var(--text-color-gray);
+  display: grid;
+  grid-template-rows: repeat(
+    1,
+    minmax(80px, auto)
+  );
+  z-index: 1;
+}
+
+/* 每个工作经历为三列栅格布局，分别为职位，分隔线、公司名和工作时间部分 */
+.work-exp-item {
+  display: grid;
+  /* 列之间的比例 */
+  grid-template-columns: 10fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 职位 */
+.position {
+  font-size: 18px;
+}
+/* 分隔线 */
+.seperator {
+  height: 43px;
+  /* width: 1px; */
+  border-left: 2px dotted #eaeff2;
+}
+
+/* 工作时间 */
+.time {
+  color: var(--text-color-light-gray);
+}
+
+/* 公司 */
+.company {
+  font-size: 14px;
+  color: var(--text-color-dark-gray);
+  margin-top: 9px;
+}
+
+
