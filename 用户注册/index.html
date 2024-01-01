@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>用户注册</title>
+  <link rel="stylesheet" href="css+font/CSS.css">
+  <link href="css+font/OPlusSans3-Bold.ttf" rel="stylesheet">
+  <style>
+    form {
+      padding: 20px;
+    }
+
+    p{
+      margin: 8px;
+    }
+
+    .cn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    span {
+      flex: 1;
+      text-align: justify;
+    }
+
+    .chenzhi {
+      display: flex;
+      justify-content: center;
+    }
+
+    h2{
+      font-size: 26px;
+      background-image: linear-gradient(to bottom, rgb(255, 110, 110), rgb(60, 167, 255));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    input[type="reset"] {
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="用户注册.html" method="post" id="name1">
+    <h2 align="center">用户注册</h2>
+    <p><span>真实姓名：</span>
+      <input type="text" maxlength="4" required> *（4-10个字符）
+    </p>
+
+    <p><span>性　　别</span>：
+      <input name="name1" type="radio"> 男
+      <input name="name1" type="radio"> 女 *
+    </p>
+
+    <p><span>昵　　称：</span>
+      <input type="text" maxlength="4" required> *
+    </p>
+
+    <p><span>密　　码：</span>
+      <input type="password" required> *（不低于6个字符）
+    </p>
+    <p><span>确认密码：</span>
+      <input type="password" required> *
+    </p>
+    <p><span>所在城市：</span>
+      <select name="下拉菜单">
+        <option value="济南">济南</option>
+        <option value="辽宁">辽宁</option>
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="广州">广州</option>
+      </select>
+    </p>
+    <div name="div1">
+      <p><span>兴趣爱好：</span>
+      <input name="" type="checkbox">看书
+      <input name="" type="checkbox">上网
+      <input name="" type="checkbox">游戏
+      <input name="" type="checkbox">篮球
+      <input name="" type="checkbox">足球
+      <input name="" type="checkbox">游泳
+      <input name="" type="checkbox">旅游
+      <input name="" type="checkbox">购物
+      </p>
+    </div>
+    <p>选择头像：
+    <div style="padding-left:80px"><input name="name2" type="radio"><img src="images/2.jpg">
+      <input name="name2" type="radio"><img src="images/3.jpg">
+      <input name="name2" type="radio"><img src="images/8.jpg">
+      <input name="name2" type="radio"><img src="images/6.jpg">
+      <br />
+      <input name="name2" type="radio"><img src="images/7.jpg">
+      <input name="name2" type="radio"><img src="images/4.jpg">
+      <input name="name2" type="radio"><img src="images/5.jpg">
+      <input name="name2" type="radio"><img src="images/10.jpg">
+    </div>
+    <p><span>联系电话：</span>
+      <input type="tel" name="telphone" pattern="^\d{11}$" required> *
+    </p>
+    <p><span>备　　注：</span></p>
+    <p>
+      <textarea rows="5" cols="42px"></textarea>
+    </p>
+    <p>说明：*号为必填项</p>
+    <div class="chenzhi">
+      <input name="注册" type="submit" value="注册">
+      <input name="取消" type="reset" value="取消">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </form>
+</body>
+
+</html>
