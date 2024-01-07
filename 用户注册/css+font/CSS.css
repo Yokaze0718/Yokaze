@@ -3,9 +3,15 @@
   font-family: 'OplusSans';
   src: url('OPlusSans3-Bold.ttf');
 }
+
+h2{
+  margin:10px auto;
+}
+
 head{
   font-family: 'OplusSans';
 }
+
 body {
   font-family: 'OplusSans';
   margin: 0;
@@ -37,6 +43,9 @@ body {
   backdrop-filter: none;
 }
 
+.chenzhi {
+  margin: 40px auto;
+}
 
 .span1 {
   position: relative;
