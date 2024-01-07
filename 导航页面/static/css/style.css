@@ -8,7 +8,6 @@ body {
     margin:0;
     overflow:hidden;
 	height: 600px;
-    font-family: 'OplusSans';
     min-height: 100vh;
 
     /* 改为插入背景图片的样式则加入以下代码

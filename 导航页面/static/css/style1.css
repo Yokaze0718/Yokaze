@@ -1,8 +1,5 @@
 @import url("css.css");
-@font-face {
-  font-family: 'OplusSans';
-  src: url('OPlusSans3-Bold.ttf');
-}
+
 @media (max-width: 900px) {
   canvas {
     transform: scale(1);
@@ -19,21 +16,21 @@
   --primary-color: #fddfdd;
   /* 主蓝色，深，导航 */
   --biaotiyanse:rgba(255, 149, 149, 0.8);
-  --primary-dark-color: #7fcaff;
+  --primary-dark-color: rgba(120, 217, 255, 0.9);
   --text-color-gray: rgb(255, 255, 255);
-  --fubiaoti-text-color:rgba(255, 255, 255, 0.4);
+  --fubiaoti-text-color:rgba(221, 255, 176, 0.8);
   --text-color-light-gray: #c1c7cb;
   --text-color-dark-gray: rgb(255, 255, 255);
   --h1-text-colorL:rgb(236, 255, 116);
 }
+
+
 
 * {
   margin: 0;
   padding: 0;
   font-size: 14px;
   box-sizing: border-box;
-  font-family: "Raleway", "PingFang SC",
-    "Microsoft Yahei", sans-serif;
 }
 
 .wrapper {
@@ -100,10 +97,10 @@
   to {
       text-shadow: 0 0 5px #ffffff,
           0 0 5px #fff,
-          0 0 10px #a5d8ff,
+          0 0 10px #b3deff,
           0 0 18px #539dff,
-          0 0 20px #fff7b7,
-          0 0 40px #e95bff; 
+          0 0 20px #e89bff,
+          0 0 40px #e643ff; 
           /*原颜色：
           0 0 18px #126fcc,
           0 0 20px #126fcc,
@@ -213,15 +210,53 @@ nav .indicator {
 .title h1 {
   font-size: 2em;
 }
-
 /* 副标题颜色 */
 .title h3 {
   color: var(--fubiaoti-text-color);
   margin: 2px 0 18px 0;
   font-size: 15px;
-  font-style: italic;
-}
+  /* 设置文字斜体，但我做的模拟打字动画效果自带倾斜了，所以隐藏掉字体的斜体效果 font-style: italic; */
 
+}
+/* 模拟打字的动画效果1，在width更改文字的字符长度ch */
+.typing-demo-1 {
+  width: 22.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  /* 给整体设置倾斜效果 */
+  transform: skewX(-15deg); 
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  /* 每隔 3 秒循环播放一次 */
+}@keyframes typing {
+  from {
+    width: 0
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+/* 模拟打字的动画效果2，在width更改文字的字符长度 */
+.typing-demo-2 {
+  width: 30ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  /* 给整体设置倾斜效果 */
+  transform: skewX(-15deg); 
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+}@keyframes typing {
+  from {
+    width: 0
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
 /* 按钮 */
 .follow-btn {
   justify-self: end;
@@ -249,7 +284,6 @@ nav .indicator {
   border-radius: 5px;
   max-width: 100%;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
