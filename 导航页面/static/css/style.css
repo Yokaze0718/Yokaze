@@ -20,16 +20,11 @@ canvas {
     margin:0;
 }
 div.btnbg {
-    position:fixed;
-left: 0;
-
-top: 0;
-
-right: 0;
-
-bottom: 0;
-
-margin:auto;
-}
-div.btnbg:hover{
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }

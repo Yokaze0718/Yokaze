@@ -3,13 +3,11 @@
   font-family: 'OplusSans';
   src: url('OPlusSans3-Bold.ttf');
 }
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .profile-card {
-    width: 80%;
-    margin: 50% auto;
+    width: 84%;
   }
 }
-
 
 :root {
   /* 主蓝色，按钮，社交图标 */
@@ -39,6 +37,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
 }
 
 .profile-card {
