@@ -3,10 +3,14 @@
   font-family: 'OplusSans';
   src: url('OPlusSans3-Bold.ttf');
 }
-@media (max-width: 1080px) {
+@media (max-width: 900px) {
   canvas {
-    width: 100%;
-    height: auto;
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 900px) {
+  .profile-card {
+    transform: scale(0.5);
   }
 }
 
