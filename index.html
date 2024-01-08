@@ -16,12 +16,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 标签页图标 -->
   <link rel="icon" href="static/picture/icon.png">
+  <!-- 微信二维码 -->
+  <link rel="img" href="static/picture/WX.png">
 
 
-  
+
 </head>
 
 <body>
+  <!-- 鼠标跟随特效 -->
+  <div class="MouseGS"></div>
   <!-- partial:index.partial.html -->
   <canvas id="sakura"></canvas>
   <div class="btnbg">
@@ -34,18 +38,20 @@
           <!-- 导航 -->
           <nav id="nav-menu">
             <!-- data-rel，在js里获取当前要展示哪个section，是个人简介还是工作经历 -->
-            <a class="active" href="#网站简介" data-rel="about-me-section">网站简介</a>
-            <a href="#作品导航" data-rel="work-exp-section">作品导航</a>
+            <a class="active zhengwentouyin3" href="#网站简介" data-rel="about-me-section">网站简介</a>
+            <a class="zhengwentouyin3" href="#作品导航" data-rel="work-exp-section" >作品导航</a>
             <!-- 当前选中菜单的指示条 -->
             <div class="indicator"></div>
           </nav>
           <!-- 关于我部分 -->
           <section class="about-me-section active-section">
             <!-- 名字和身份信息 -->
-            <div class="h1color">
+            <div class="h1color  zhengwentouyin4">
               <span>陈</span>
               <span>志</span>
               <span>の</span>
+              <span>个</span>
+              <span>人</span>
               <span>导</span>
               <span>航</span>
               <span>></span>
@@ -54,19 +60,19 @@
             </div>
             <div class="personal-info title">
               <h3 class="typing-demo-1">
-                <一个还没想好的副标题 ^_^ />
+                <欢迎来到我的第一个线上个人网站 ^_^ />
               </h3>
             </div>
             <!-- 个人简介的内容 -->
             <div class="网站简介">
-              <p style="text-indent: 2em;">
+              <p style="text-indent: 2em;" class="zhengwentouyin">
                 “我是来自营口职业技术学院计算机应用技术2022级的一名学生，这是2024.1.1制作的简单中转页面。”
               </p>
             </div>
             <!-- 社交图标 -->
             <footer>
               <ul>
-                <li style="margin: 0px 20px 0px 0px;">
+                <li style="margin: 0px 20px 0px 0px;" title="点击后跳转到QQ好友添加页面 ^_^">
                   <a href="https://qm.qq.com/q/WVDA74zaY8" target="_blank"><svg t="1704124815233" class="icon"
                       viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9478" width="32"
                       height="32">
@@ -102,10 +108,11 @@
                         fill="#EB1C26" p-id="9488"></path>
                     </svg></i></a>
                 </li>
-                <li style="margin: 0px 20px 0px 0px;">
-                  <a href="" onclick="copyTextToClipboard()" target="_blank"><svg t="1704124678088" class="icon"
-                      viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7961" width="32"
-                      height="32">
+                <li style="margin: 0px 20px 0px 0px;" title="点击后可选择微信添加方式 ^_^">
+
+                  <!-- 下方onclick设置点击微信图标后的弹窗 -->
+                  <a href="#" onclick="openPopup()"><svg t="1704124678088" class="icon" viewBox="0 0 1024 1024"
+                      version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7961" width="32" height="32">
                       <path
                         d="M0 0m184.32 0l655.36 0q184.32 0 184.32 184.32l0 655.36q0 184.32-184.32 184.32l-655.36 0q-184.32 0-184.32-184.32l0-655.36q0-184.32 184.32-184.32Z"
                         fill="#65DB79" p-id="7962"></path>
@@ -125,7 +132,7 @@
                         fill="#65DB79" p-id="7968"></path>
                     </svg></i></a>
                 </li>
-                <li style="margin: 0px 20px 0px 0px;">
+                <li style="margin: 0px 20px 0px 0px;" title="前往我的Github主页 ^_^">
                   <a href="https://githubfast.com/Yokaze0718" target="_blank"><svg t="1704125123219" class="icon"
                       viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22682" width="32"
                       height="32">
@@ -134,7 +141,7 @@
                         fill="#24292E" p-id="22683"></path>
                     </svg></path></svg></i></a>
                 </li>
-                <li style="margin: 0px 20px 0px 0px;">
+                <li style="margin: 0px 20px 0px 0px;" title="给我发送邮件 ^_^">
                   <a href="mailto:y0kaze@163.com" target="_blank"><svg t="1704125039715" class="icon"
                       viewBox="0 0 1586 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19228" width="32"
                       height="32">
@@ -150,10 +157,13 @@
                     </svg></i></a>
                 </li>
               </ul>
+
+
+
             </footer>
           </section>
           <!-- 导航地址部分 -->
-          <section class="work-exp-section">
+          <section class="work-exp-section zhengwentouyin4">
             <!-- 导航地址容器 -->
             <div class="作品导航">
               <div class="h1color">
@@ -164,7 +174,10 @@
                 <span>期</span>
                 <span>末</span>
                 <span>作</span>
-                <span>业</span>
+                <span>品</span>
+                <span>></span>
+                <span>></span>
+                <span>></span>
               </div>
               <div class="personal-info title">
                 <h3 class="typing-demo-2">
@@ -173,29 +186,42 @@
               </div>
 
               <div>
-                <button class="custom-btn btn-16"
+                <button class="custom-btn btn-16 zhengwentouyin2"
                   onclick="window.open('https://chen-zhi.netlify.app/01', '_blank');">用户注册</button>
-                <button class="custom-btn btn-16"
-                  onclick="window.open('https://chen-zhi.netlify.app/02', '_blank');">孙梅的毕业风采</button>
-                <button class="custom-btn btn-16"
-                  onclick="window.open('https://chen-zhi.netlify.app/03', '_blank');">营职概况</button>
-                <button class="custom-btn btn-16"
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('https://chen-zhi.netlify.app/03', '_blank');">营职院概况</button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('https://chen-zhi.netlify.app/02', '_blank');">一篇毕业风采</button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
                   onclick="window.open('https://chen-zhi.netlify.app/04', '_blank');">学院风光</button>
-                <button class="custom-btn btn-16"
+                <button class="custom-btn btn-16 zhengwentouyin2"
                   onclick="window.open('https://chen-zhi.netlify.app/05', '_blank');">表格制作</button>
-                <button class="custom-btn btn-16"
+                <button class="custom-btn btn-16 zhengwentouyin2"
                   onclick="window.open('https://chen-zhi.netlify.app/06', '_blank');">贝多芬个人简介</button>
               </div>
             </div>
 
           </section>
         </div>
+
+        <!-- 卡片之间的间隙，目前不需要 先隐藏
+        <div class="space"></div> -->
+
         <!-- 侧边动态图片 -->
         <aside class="profile-image">
-          <img src="static/picture/caticon.gif" alt="" style="margin: 50% auto;">
+          <img src="static/picture/caticon.gif" alt="喵">
         </aside>
       </div>
 
+      <!-- 微信按钮弹窗的内容 -->
+      <dialog id="popup">
+        <div class="dialog-content">
+          <button class="custom-btn-TC btn-17" onclick="scanQRCode()">扫码添加</button>
+          <button class="custom-btn-TC btn-17" onclick="copyWechatID()">复制微信号并跳转</button>
+          <button class="custom-btn-TC btn-17" onclick="closePopup()">我点错啦</button>
+        </div>
+      </dialog>
+      <!-- 弹窗内容↑ -->
     </div>
 
   </div>
@@ -293,6 +319,8 @@ void main(void) {
     distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
 }
 </script>
+
+<!-- 樱花花瓣阴影亮度在下面的col *= mix(2.2, 1.0, pow(abs(coord.x), 0.3));调整 -->
   <script id="sakura_point_fsh" type="x-shader/x_fragment">
 #ifdef GL_ES
 //precision mediump float;
@@ -354,7 +382,9 @@ void main(void) {
     vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
     float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
     col *= vec3(1.0, grady, grady);
-    col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
+
+    col *= mix(2.2, 1.0, pow(abs(coord.x), 0.3));
+
     col = col * diffuse + specular;
     
     col = mix(fadeCol, col, distancefade);
@@ -400,7 +430,8 @@ void main(void) {
     float c;
     vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
     c = exp(-pow(length(tmpv) * 1.8, 2.0));
-    col = mix(vec3(0.02, 0.01, 0.05), vec3(0.96, 0.98, 1.0) * 1.5, c);
+    col = mix(vec3(0.6, 0.5, 0.53) * 1.1, vec3(0.45,0.95,1), c);
+
     gl_FragColor = vec4(col * 0.5, 1.0);
 }
 </script>
@@ -496,8 +527,24 @@ void main(void) {
   <!-- partial -->
   <script src="static/js/script.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- 微信图标的弹窗 -->
   <script>
-    function copyTextToClipboard() {
+    function openPopup() {
+      document.getElementById("popup").showModal();
+      return false;
+    }
+
+    function closePopup() {
+      document.getElementById("popup").close();
+    }
+
+    function scanQRCode() {
+      window.open("static/picture/WX.png", "_blank");
+    }
+
+    function copyWechatID() {
+
       // Get the text to be copied
       // 我的微信号
       var textToCopy = "Yorufuu";
@@ -521,11 +568,65 @@ void main(void) {
       document.body.removeChild(tempElement);
 
       // Display a message to the user indicating that the text has been copied
-      alert("复制了陈志的微信号，确定后跳转到微信..");
+      alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
 
       // Redirect the user to the WeChat app
       window.location.href = "weixin://";
     }
+  </script>
+  <!-- 微信弹窗👆 -->
+
+          <!-- 鼠标跟随JS -->
+          <script>
+            let img = document.querySelector('.MouseGS')
+            // 定义小图片的旋转角度
+            let deg = 0
+            // 定义小图片位于网页左侧的位置
+            let imgx = 0
+            // 定义小图片位于网页顶部的位置
+            let imgy = 0
+            // 定义小图片x轴的位置
+            let imgl = 0
+            // 定义小图片y轴的位置
+            let imgt = 0
+            // 定义小图片翻转的角度
+            let y = 0 
+            // 定义一个计数器
+            let index = 0
+
+            window.addEventListener('mousemove',function(xyz){
+                // 获取网页左侧距离的图片位置
+                imgx = xyz.x - img.offsetLeft - img.clientWidth /2
+                // 多去网页顶部距离图片的位置
+                imgy = xyz.y - img.offsetTop - img.clientHeight /2
+                // 套入公式，定义图片的旋转角度
+                deg = 360*Math.atan(imgy/imgx)/(2*Math.PI)
+                // 每当鼠标移动的时候重置index
+                index= 0
+                // 定义当前鼠标的位置
+                let x = event.clientX
+                // 当鼠标的x轴大于图片的时候，提普安就要对着鼠标，所以需要将图片翻转过来
+                // 否则就不用翻转
+                if(img.offsetLeft<x){
+                    y=-180
+                }else{
+                    y=0
+                }
+            })
+            setInterval(()=>{
+                // 设置小图片的旋转和翻转
+                img.style.transform = "rotateZ("+deg+"deg) rotateY("+y+"deg)"
+                index++
+                // 在这里设置小图片的位置和速度，并判断小图片到达鼠标位置时停止移动
+                if(index<50){
+                    imgl+=imgx/50
+                    imgt+=imgy/50
+                }
+                img.style.left = imgl+"px"
+                img.style.top = imgt+"px"
+            },10)
+        </script>
+
   </script>
 
 

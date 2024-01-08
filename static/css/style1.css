@@ -1,24 +1,23 @@
 @import url("css.css");
 
-@media (max-width: 900px) {
-  canvas {
-    transform: scale(1);
-  }
-}
-@media screen and (max-width: 900px) {
+
+@media(max-width: 900px) {
   .profile-card {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
 }
 
+@media (max-width: 768px) {
+  .MouseGS {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
 :root {
-  /* 主蓝色，按钮，社交图标 */
-  --primary-color: #fddfdd;
-  /* 主蓝色，深，导航 */
-  --biaotiyanse:rgba(255, 149, 149, 0.8);
-  --primary-dark-color: rgba(120, 217, 255, 0.9);
+  /* 导航文字的颜色 */
+  --primary-dark-color: rgba(206, 255, 173, 0.937);
   --text-color-gray: rgb(255, 255, 255);
-  --fubiaoti-text-color:rgba(221, 255, 176, 0.8);
+  --fubiaoti-text-color:rgb(255, 251, 184);
   --text-color-light-gray: #c1c7cb;
   --text-color-dark-gray: rgb(255, 255, 255);
   --h1-text-colorL:rgb(236, 255, 116);
@@ -41,28 +40,44 @@
   height: 100vh;
 }
 
+/* 卡片的大小和栅格分配 */
 .profile-card {
   display: grid;
+
+  /*平均分12格*/
+  /*grid-template-columns: repeat(12, 1fr);*/
+
+  /* 每一格单独设置宽度 这里可以单独给每一列设置px宽度*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
   column-gap: 12px;
   width: 600px;
-  height: 374px;
+  height: 390px;
   box-shadow: 0px 0px 22px 3px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(1px);
+}
+/* 卡片左侧内容 占据1-7列位置*/
+.content {
+  grid-column: 1 / 8;
+  padding: 52px 30px 40px 45px;
+  position: relative;
 }
 
+/* 卡片内容之间的间隙 占据第8列位置
+.spacer {
+  grid-column: 8 /9;
+} */
 
-
+/* 卡片右侧内容 占据8-12列位置*/
 .profile-image {
-  /* 图片占5列 */
   grid-column: 8 / 13;
-  max-width: 238px;
+  max-width: 220px;
   height: 100%;
-  /* 隐藏图片超出区域 */
   overflow: hidden;
-  /* 垂直为靠上对齐 */
   align-self: center;
-  /* 水平为靠右对齐 */
   justify-self: end;
-  margin-right: 20px;
+  margin-right: 30px;
+  padding: 50% 0px;
 }
 
 .profile-image img {
@@ -72,16 +87,26 @@
 }
 
 
-.content {
-  /* 左边内容占7列 */
-  grid-column: 1 / 8;
-  padding: 38px 28px 20px 33px;
-  position: relative;
+/* 文字投影 文字阴影效果 */
+.zhengwentouyin{
+  text-shadow: 2px 2px 3px rgb(255, 135, 135);
 }
+.zhengwentouyin2{
+  text-shadow: 2px 2px 3px rgb(138, 177, 255);
+}
+.zhengwentouyin3{
+  text-shadow: 2px 2px 4px rgba(93, 255, 236, 0.947);
+}
+.zhengwentouyin4{
+  text-shadow: 6px 12px 5px rgba(214, 144, 255, 0.84);
+}
+
+
 /*流光标题*/
 .h1color{
   color:var(--biaotiyanse);
   margin: 3px 0px 14px 0px;
+  white-space: nowrap;
 }
 
 .h1color span {
@@ -97,10 +122,10 @@
   to {
       text-shadow: 0 0 5px #ffffff,
           0 0 5px #fff,
-          0 0 10px #b3deff,
-          0 0 18px #539dff,
-          0 0 20px #e89bff,
-          0 0 40px #e643ff; 
+          0 0 10px #cdf4ff,
+          0 0 18px #61c5ff,
+          0 0 20px #a6f0ff,
+          0 0 40px #1070ff; 
           /*原颜色：
           0 0 18px #126fcc,
           0 0 20px #126fcc,
@@ -170,6 +195,7 @@ nav a {
 }
 
 nav a.active {
+  /* 导航文字的颜色 */
   color: var(--primary-dark-color);
 }
 
@@ -197,6 +223,11 @@ nav .indicator {
 
 .content section.active-section {
   /* 显示active-section */
+
+  /* 设置内容框的宽高大小 */
+  height: 250px;
+  width: 300px;
+  
   opacity: 1;
   z-index: 1;
 }
@@ -213,21 +244,25 @@ nav .indicator {
 /* 副标题颜色 */
 .title h3 {
   color: var(--fubiaoti-text-color);
+  text-shadow: 1px 1px 1px #8b8b8bdd;
   margin: 2px 0 18px 0;
   font-size: 15px;
-  /* 设置文字斜体，但我做的模拟打字动画效果自带倾斜了，所以隐藏掉字体的斜体效果 font-style: italic; */
+  /* 设置文字斜体，但我做的模拟打字动画效果自带倾斜了，所以隐藏掉字体的斜体效果
+  font-style: italic; */
 
 }
 /* 模拟打字的动画效果1，在width更改文字的字符长度ch */
 .typing-demo-1 {
-  width: 22.5ch;
+  width: 30.5ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  /* 给整体设置倾斜效果 */
-  transform: skewX(-15deg); 
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  /* 每隔 3 秒循环播放一次 */
+  /* 给整体设置倾斜效果
+  transform: skewX(-15deg);  */
+
+  /* 更改动画整体的时间 */
+  animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+
 }@keyframes typing {
   from {
     width: 0
@@ -244,8 +279,10 @@ nav .indicator {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  /* 给整体设置倾斜效果 */
-  transform: skewX(-15deg); 
+  /* 给整体设置倾斜效果
+  transform: skewX(-15deg); */ 
+
+    /* 更改动画整体的时间 */
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
 }@keyframes typing {
   from {
@@ -257,6 +294,7 @@ nav .indicator {
     border-color: transparent
   }
 }
+
 /* 按钮 */
 .follow-btn {
   justify-self: end;
@@ -298,6 +336,8 @@ nav .indicator {
 .btn-16 {
   border: none;
   color: var(--text-color-dark-gray);
+  white-space: nowrap;
+  border-radius: 5px;
   z-index: 3;
 }
 .btn-16:after {
@@ -305,6 +345,7 @@ nav .indicator {
   content: "";
   width: 0;
   height: 100%;
+  border-radius: 5px;
   top: 0;
   left: 0;
   direction: rtl;
@@ -318,6 +359,7 @@ nav .indicator {
 }
 .btn-16:hover {
   color: #86ccff;
+  border-radius: 5px;
 }
 .btn-16:hover:after {
   left: auto;
@@ -349,11 +391,13 @@ nav .indicator {
 
 /* 社交按钮部分 */
 footer {
-  margin-top: 70px;
+  margin:auto auto 0px 0px;
 }
 
 footer ul {
   display: flex;
+  position: absolute;
+  bottom: 0;
 }
 
 footer ul li {
@@ -411,4 +455,107 @@ footer .fab {
   margin-top: 9px;
 }
 
+}
+
+/* 微信按钮点击后的弹窗样式 */
+    dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      /* 弹窗背景颜色 */
+      background: linear-gradient(30deg, #7abaff94, rgba(255, 113, 203, 0.482));
+      /* 弹窗边框粗细和颜色 */
+      border: 2px solid rgba(133, 253, 249, 0.56);
+      /* 弹窗边框圆角程度 */
+      border-radius: 15px;
+      /* 设置弹窗的大小(内边距) */
+      padding: 22px;
+    }
+
+    /* 设置点击按钮后模糊页面的其余部分,blur越大越模糊 */
+    dialog::backdrop {
+      backdrop-filter: blur(7px);
+    }
+
+    .dialog-content {
+      display: flex;
+      /* 垂直排列 */
+      flex-direction: column;
+    }
+
+
+  /* 微信图标弹窗内按钮部分 */
+    .custom-btn-TC {
+      /* 设置弹窗中按钮的上下间距 */
+      margin: 20px;
+      color: rgb(255, 255, 255);
+      border-radius: 12px;
+      max-width: 100%;
+      padding: 10px 25px;
+      /* 按钮字体大小 */
+      font-size: 18px;
+      font-weight: bold;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+      outline: none;
+    }
+    .btn-17 {
+      border: none;
+      color: var(--text-color-dark-gray);
+      white-space: nowrap;
+      z-index: 3;
+    }
+    .btn-17:after {
+      position: absolute;
+      border-radius: 12px;
+      content: "";
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      direction: rtl;
+      z-index: -1;
+      box-shadow:
+      -7px -7px 20px 0px #fff9,
+      -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002,
+      4px 4px 5px 0px #0001;
+      transition: all 0.6s ease;
+    }
+    .btn-17:hover {
+      color: #86ccff;
+      border-radius: 12px;
+    }
+    .btn-17:hover:after {
+      left: auto;
+      right: 0;
+      width: 100%;
+      border-radius: 12px;
+    }
+    .btn-17:active {
+      top: 2px;
+      border-radius: 12px;
+    }
+  /* 弹窗内按钮部分👆 */
+
+/* 微信按钮的浏览器弹窗样式👆 */
+
+
+
+/* 鼠标跟随特效在url替换图片 */
+.MouseGS{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  background-image: url('/static/picture/cat2.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
