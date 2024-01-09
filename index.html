@@ -199,7 +199,7 @@
                       onclick="window.open('https://note.youdao.com/', '_blank');">有道云笔记</button>
                       
                   <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://Yokaze.netlify.com/樱花背景源码/', '_blank');">背景原作预览</a>
+                  onclick="window.open('/樱花背景源码/', '_blank');">背景原作预览</a>
 
               </div>
             </div>
@@ -548,27 +548,27 @@ void main(void) {
     }
 
     function copyWechatID() {
-// 获取要复制的文本
-var textToCopy = "Yorufuu";
+		// 获取要复制的文本
+		var textToCopy = "Yorufuu";
 
-// 检查浏览器是否支持 navigator.clipboard API
-if (navigator.clipboard) {
-  // 浏览器支持 navigator.clipboard API
+		// 检查浏览器是否支持 navigator.clipboard API
+		if (navigator.clipboard) {
+		  // 浏览器支持 navigator.clipboard API
 
-  // 使用 navigator.clipboard.writeText() 方法复制文本到剪贴板
-  navigator.clipboard.writeText(textToCopy).then(function() {
-    // 成功复制文本到剪贴板
-    alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
+		  // 使用 navigator.clipboard.writeText() 方法复制文本到剪贴板
+		  navigator.clipboard.writeText(textToCopy).then(function() {
+			// 成功复制文本到剪贴板
+			alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
 
-    // 跳转到微信
-    window.location.href = "weixin://";
-  }, function() {
-    // 复制文本到剪贴板失败
-    alert("复制微信号失败，请重试！");
-  });
-} else {
-  // 浏览器不支持 navigator.clipboard API，您需要使用其他方法来复制文本
-}
+			// 跳转到微信
+			window.location.href = "weixin://";
+		  }, function() {
+			// 复制文本到剪贴板失败
+			alert("复制微信号失败，请重试！");
+		  });
+		} else {
+		  // 浏览器不支持 navigator.clipboard API，您需要使用其他方法来复制文本
+		}
     }
   </script>
   <!-- 微信弹窗👆 -->
