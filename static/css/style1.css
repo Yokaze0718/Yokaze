@@ -80,6 +80,12 @@
   padding: 50% 0px;
 }
 
+.zhengwen{
+  white-space: wrap;
+  text-indent: 2em;
+}
+
+
 .profile-image img {
   /* 图片放大，然后只显示一部分 */
   width: 100%;
@@ -245,7 +251,7 @@ nav .indicator {
 .title h3 {
   color: var(--fubiaoti-text-color);
   text-shadow: 1px 1px 1px #8b8b8bdd;
-  margin: 2px 0 18px 0;
+  margin: 0px 0 12px 0;
   font-size: 15px;
   /* 设置文字斜体，但我做的模拟打字动画效果自带倾斜了，所以隐藏掉字体的斜体效果
   font-style: italic; */
@@ -253,7 +259,7 @@ nav .indicator {
 }
 /* 模拟打字的动画效果1，在width更改文字的字符长度ch */
 .typing-demo-1 {
-  width: 30.5ch;
+  width: 23ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -275,7 +281,7 @@ nav .indicator {
 }
 /* 模拟打字的动画效果2，在width更改文字的字符长度 */
 .typing-demo-2 {
-  width: 30ch;
+  width: 21ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;

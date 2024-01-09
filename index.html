@@ -10,12 +10,12 @@
   <link href="static/font/Mingchao.ttf" rel="stylesheet">
   <!-- 设置默认缩放百分比 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 标签页图标 -->
+  <!-- 标签页图标路径 -->
   <link rel="icon" href="static/picture/icon.png">
-  <!-- 微信二维码 -->
+  <!-- 微信二维码路径 -->
   <link rel="img" href="static/picture/WX.png">
 
-  <title>陈志の个人导航</title>
+  <title>Yokazeの网站</title>
 
 
 </head>
@@ -36,43 +36,47 @@
           <nav id="nav-menu">
             <!-- data-rel，在js里获取当前要展示哪个section，是个人简介还是工作经历 -->
             <a class="active zhengwentouyin3" href="#网站简介" data-rel="about-me-section">网站简介</a>
-            <a class="zhengwentouyin3" href="#作品导航" data-rel="work-exp-section" >作品导航</a>
+            <a class="zhengwentouyin3" href="#作品导航" data-rel="work-exp-section">网站导航</a>
             <!-- 当前选中菜单的指示条 -->
             <div class="indicator"></div>
           </nav>
           <!-- 关于我部分 -->
           <section class="about-me-section active-section">
             <!-- 名字和身份信息 -->
-            <div class="h1color  zhengwentouyin4">
-              <span>陈</span>
-              <span>志</span>
-              <span>の</span>
-              <span>个</span>
-              <span>人</span>
-              <span>导</span>
-              <span>航</span>
+            <div class="h1color zhengwentouyin4">
+              <span>Y</span>
+              <span>o</span>
+              <span>k</span>
+              <span>a</span>
+              <span>z</span>
+              <span>e</span>
+              <span>的</span>
+              <span>网</span>
+              <span>站</span>
               <span>></span>
               <span>></span>
               <span>></span>
             </div>
             <div class="personal-info title">
               <h3 class="typing-demo-1">
-                <欢迎来到我的第一个线上个人网站 ^_^ />
+                <!-- 文字长度变化后需要在typing-demo-1修改ch长度 -->
+                <欢迎来到我的导航网站 ^_^ />
               </h3>
             </div>
             <!-- 个人简介的内容 -->
             <div class="网站简介">
-              <p style="text-indent: 2em;" class="zhengwentouyin">
-                “我是来自营口职业技术学院计算机应用技术2022级的一名学生，这是2024.1.1制作的简单中转页面。”
+              <p class="zhengwen zhengwentouyin">
+                “这是我的第一个线上网站,网站的功能仍有一些缺陷,网站代码已经开源,可以点击下方Gtihub图标前往我的仓库主页,另外基于WebGL的樱花背景的源代码也加入到了文件中,代码中有一条注释是原作链接但是较为久远已经失效,再次欢迎你的光临...”
               </p>
             </div>
             <!-- 社交图标 -->
             <footer>
               <ul>
                 <li style="margin: 0px 20px 0px 0px;" title="点击后跳转到QQ好友添加页面 ^_^">
-                  <a href="http://wpa.qq.com/msgrd?v=3&uin=51887727&site=qq&menu=yes" target="_blank"><svg t="1704124815233" class="icon"
-                      viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9478" width="32"
-                      height="32">
+                  <!-- 可以直接把uin=后方的数字替换为自己的QQ -->
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=51887727&site=qq&menu=yes" target="_blank"><svg
+                      t="1704124815233" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" p-id="9478" width="32" height="32">
                       <path
                         d="M511.09761 957.257c-80.159 0-153.737-25.019-201.11-62.386-24.057 6.702-54.831 17.489-74.252 30.864-16.617 11.439-14.546 23.106-11.55 27.816 13.15 20.689 225.583 13.211 286.912 6.767v-3.061z"
                         fill="#FAAD08" p-id="9479"></path>
@@ -129,8 +133,9 @@
                         fill="#65DB79" p-id="7968"></path>
                     </svg></i></a>
                 </li>
-                <li style="margin: 0px 20px 0px 0px;" title="前往我的Github主页 ^_^">
-                  <a href="https://githubfast.com/Yokaze0718" target="_blank"><svg t="1704125123219" class="icon"
+                <li style="margin: 0px 20px 0px 0px;" title="前往本项目的Github仓库 ^_^">
+                  <!-- 更改github图标的目标链接 -->
+                  <a href="https://githubfast.com/Yokaze0718/Yokaze" target="_blank"><svg t="1704125123219" class="icon"
                       viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22682" width="32"
                       height="32">
                       <path
@@ -139,7 +144,8 @@
                     </svg></path></svg></i></a>
                 </li>
                 <li style="margin: 0px 20px 0px 0px;" title="给我发送邮件 ^_^">
-                  <a href="mailto:y0kaze@163.com" target="_blank"><svg t="1704125039715" class="icon"
+                  <!-- 修改mailto为自己的邮箱 -->
+                  <a href="mailto:123456@abc.com" target="_blank"><svg t="1704125039715" class="icon"
                       viewBox="0 0 1586 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19228" width="32"
                       height="32">
                       <path
@@ -162,39 +168,39 @@
           <!-- 导航地址部分 -->
           <section class="work-exp-section zhengwentouyin4">
             <!-- 导航地址容器 -->
-            <div class="作品导航">
+            <div class="网站导航">
               <div class="h1color">
-                <span>H</span>
-                <span>T</span>
-                <span>M</span>
-                <span>L</span>
-                <span>期</span>
-                <span>末</span>
-                <span>作</span>
-                <span>品</span>
+                <span>🐈</span>
+                <span>网</span>
+                <span>站</span>
+                <span>导</span>
+                <span>航</span>
                 <span>></span>
                 <span>></span>
                 <span>></span>
               </div>
               <div class="personal-info title">
                 <h3 class="typing-demo-2">
-                  <一些2023年末的HTML+CSS期末作品 />
+                  <!-- 更改文字长度后修改typing-demo-2的ch长度 -->
+                  <一些随意定义的内容 ^_^/>
                 </h3>
               </div>
 
               <div>
                 <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://chen-zhi.netlify.app/01', '_blank');">用户注册</button>
+                  onclick="window.open('https://cn.bing.com/', '_blank');">必应搜索</button>
                 <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://chen-zhi.netlify.app/03', '_blank');">营职院概况</button>
-                <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://chen-zhi.netlify.app/02', '_blank');">一篇毕业风采</button>
-                <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://chen-zhi.netlify.app/04', '_blank');">学院风光</button>
-                <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://chen-zhi.netlify.app/05', '_blank');">表格制作</button>
-                <button class="custom-btn btn-16 zhengwentouyin2"
-                  onclick="window.open('https://chen-zhi.netlify.app/06', '_blank');">贝多芬个人简介</button>
+                  onclick="window.open('https://app.netlify.com/', '_blank');">Netlify</button>
+                  <button class="custom-btn btn-16 zhengwentouyin2"
+                    onclick="window.open('https://vercel.com/', '_blank');">Vercel</button>
+                    <button class="custom-btn btn-16 zhengwentouyin2"
+                    onclick="window.open('https://gemini.chat4ai.top/', '_blank');">Gemini</button>
+                    <button class="custom-btn btn-16 zhengwentouyin2"
+                      onclick="window.open('https://note.youdao.com/', '_blank');">有道云笔记</button>
+                      
+                  <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('https://Yokaze.netlify.com/樱花背景源码/', '_blank');">背景原作预览</a>
+
               </div>
             </div>
 
@@ -317,7 +323,7 @@ void main(void) {
 }
 </script>
 
-<!-- 樱花花瓣阴影亮度在下面的col *= mix(2.2, 1.0, pow(abs(coord.x), 0.3));调整 -->
+  <!-- 樱花花瓣阴影亮度在下面的col *= mix(2.2, 1.0, pow(abs(coord.x), 0.3));调整 -->
   <script id="sakura_point_fsh" type="x-shader/x_fragment">
 #ifdef GL_ES
 //precision mediump float;
@@ -537,92 +543,86 @@ void main(void) {
     }
 
     function scanQRCode() {
+      // 把此处的路径替换为自己的微信二维码即可在按钮点击后弹出微信二维码
       window.open("static/picture/WX.png", "_blank");
     }
 
     function copyWechatID() {
+// 获取要复制的文本
+var textToCopy = "Yorufuu";
 
-      // Get the text to be copied
-      // 我的微信号
-      var textToCopy = "Yorufuu";
+// 检查浏览器是否支持 navigator.clipboard API
+if (navigator.clipboard) {
+  // 浏览器支持 navigator.clipboard API
 
-      // Create a new element to hold the text to be copied
-      var tempElement = document.createElement("textarea");
+  // 使用 navigator.clipboard.writeText() 方法复制文本到剪贴板
+  navigator.clipboard.writeText(textToCopy).then(function() {
+    // 成功复制文本到剪贴板
+    alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
 
-      // Set the value of the temp element to the text to be copied
-      tempElement.value = textToCopy;
-
-      // Add the temp element to the body
-      document.body.appendChild(tempElement);
-
-      // Select the temp element
-      tempElement.select();
-
-      // Copy the text to the clipboard
-      document.execCommand("copy");
-
-      // Remove the temp element from the body
-      document.body.removeChild(tempElement);
-
-      // Display a message to the user indicating that the text has been copied
-      alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
-
-      // Redirect the user to the WeChat app
-      window.location.href = "weixin://";
+    // 跳转到微信
+    window.location.href = "weixin://";
+  }, function() {
+    // 复制文本到剪贴板失败
+    alert("复制微信号失败，请重试！");
+  });
+} else {
+  // 浏览器不支持 navigator.clipboard API，您需要使用其他方法来复制文本
+}
     }
   </script>
   <!-- 微信弹窗👆 -->
 
-          <!-- 鼠标跟随JS -->
-          <script>
-            let img = document.querySelector('.MouseGS')
-            // 定义小图片的旋转角度
-            let deg = 0
-            // 定义小图片位于网页左侧的位置
-            let imgx = 0
-            // 定义小图片位于网页顶部的位置
-            let imgy = 0
-            // 定义小图片x轴的位置
-            let imgl = 0
-            // 定义小图片y轴的位置
-            let imgt = 0
-            // 定义小图片翻转的角度
-            let y = 0 
-            // 定义一个计数器
-            let index = 0
+  <!-- 鼠标跟随特效的JS -->
+  <script>
+    let img = document.querySelector('.MouseGS')
+    // 定义小图片的旋转角度
+    let deg = 0
+    // 定义小图片位于网页左侧的位置
+    let imgx = 0
+    // 定义小图片位于网页顶部的位置
+    let imgy = 0
+    // 定义小图片x轴的位置
+    let imgl = 0
+    // 定义小图片y轴的位置
+    let imgt = 0
+    // 定义小图片翻转的角度
+    let y = 0
+    // 定义一个计数器
+    let index = 0
 
-            window.addEventListener('mousemove',function(xyz){
-                // 获取网页左侧距离的图片位置
-                imgx = xyz.x - img.offsetLeft - img.clientWidth /2
-                // 多去网页顶部距离图片的位置
-                imgy = xyz.y - img.offsetTop - img.clientHeight /2
-                // 套入公式，定义图片的旋转角度
-                deg = 360*Math.atan(imgy/imgx)/(2*Math.PI)
-                // 每当鼠标移动的时候重置index
-                index= 0
-                // 定义当前鼠标的位置
-                let x = event.clientX
-                // 当鼠标的x轴大于图片的时候，提普安就要对着鼠标，所以需要将图片翻转过来
-                // 否则就不用翻转
-                if(img.offsetLeft<x){
-                    y=-180
-                }else{
-                    y=0
-                }
-            })
-            setInterval(()=>{
-                // 设置小图片的旋转和翻转
-                img.style.transform = "rotateZ("+deg+"deg) rotateY("+y+"deg)"
-                index++
-                // 在这里设置小图片的位置和速度，并判断小图片到达鼠标位置时停止移动
-                if(index<50){
-                    imgl+=imgx/50
-                    imgt+=imgy/50
-                }
-                img.style.left = imgl+"px"
-                img.style.top = imgt+"px"
-            },10)
-        </script>
+    window.addEventListener('mousemove', function (xyz) {
+      // 获取网页左侧距离的图片位置
+      imgx = xyz.x - img.offsetLeft - img.clientWidth / 2
+      // 多去网页顶部距离图片的位置
+      imgy = xyz.y - img.offsetTop - img.clientHeight / 2
+      // 套入公式，定义图片的旋转角度
+      deg = 360 * Math.atan(imgy / imgx) / (2 * Math.PI)
+      // 每当鼠标移动的时候重置index
+      index = 0
+      // 定义当前鼠标的位置
+      let x = event.clientX
+      // 当鼠标的x轴大于图片的时候，图标就要对着鼠标，所以需要将图片翻转过来
+      // 否则就不用翻转
+      if (img.offsetLeft < x) {
+        y = -180
+      } else {
+        y = 0
+      }
+    })
+    setInterval(() => {
+      // 设置小图片的旋转和翻转
+      img.style.transform = "rotateZ(" + deg + "deg) rotateY(" + y + "deg)"
+      index++
+      // 在这里设置小图片的位置和速度，并判断小图片到达鼠标位置时停止移动
+      if (index < 50) {
+        imgl += imgx / 50
+        imgt += imgy / 50
+      }
+      img.style.left = imgl + "px"
+      img.style.top = imgt + "px"
+    }, 10)
+  </script>
 
   </script>
 
