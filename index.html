@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/style1.css">
   <link rel="stylesheet" href="static/css/normalize.min.css">
-  <!-- 自定义的字体 -->
-  <link href="static/font/Mingchao.ttf" rel="stylesheet">
   <!-- 设置默认缩放百分比 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 标签页图标路径 -->
@@ -15,7 +13,7 @@
   <!-- 微信二维码路径 -->
   <link rel="img" href="static/picture/WX.png">
 
-  <title>Yokazeの网站</title>
+  <title>Yokazeの小站</title>
 
 
 </head>
@@ -50,8 +48,8 @@
               <span>a</span>
               <span>z</span>
               <span>e</span>
-              <span>的</span>
-              <span>网</span>
+              <span>の</span>
+              <span>小</span>
               <span>站</span>
               <span>></span>
               <span>></span>
@@ -66,7 +64,7 @@
             <!-- 个人简介的内容 -->
             <div class="网站简介">
               <p class="zhengwen zhengwentouyin">
-                “这是我的第一个线上网站,网站的功能仍有一些缺陷,网站代码已经开源,可以点击下方Gtihub图标前往我的仓库主页,另外基于WebGL的樱花背景的源代码也加入到了文件中,代码中有一条注释是原作链接但是较为久远已经失效,再次欢迎你的光临...”
+                “这是我的第一个线上网站,功能仍有一些缺陷,点击下方Gtihub图标即可前往本项目仓库查看和下载源码,另外基于WebGL的樱花背景的源码也加入到了文件中,再次欢迎你的光临！~”
               </p>
             </div>
             <!-- 社交图标 -->
@@ -159,6 +157,9 @@
                         fill="#FADAAC" p-id="19231"></path>
                     </svg></i></a>
                 </li>
+
+
+
               </ul>
 
 
@@ -182,7 +183,7 @@
               <div class="personal-info title">
                 <h3 class="typing-demo-2">
                   <!-- 更改文字长度后修改typing-demo-2的ch长度 -->
-                  <一些随意定义的内容 ^_^/>
+                  <一些随意定义的内容 ^_^ />
                 </h3>
               </div>
 
@@ -191,14 +192,13 @@
                   onclick="window.open('https://cn.bing.com/', '_blank');">必应搜索</button>
                 <button class="custom-btn btn-16 zhengwentouyin2"
                   onclick="window.open('https://app.netlify.com/', '_blank');">Netlify</button>
-                  <button class="custom-btn btn-16 zhengwentouyin2"
-                    onclick="window.open('https://vercel.com/', '_blank');">Vercel</button>
-                    <button class="custom-btn btn-16 zhengwentouyin2"
-                    onclick="window.open('https://gemini.chat4ai.top/', '_blank');">Gemini</button>
-                    <button class="custom-btn btn-16 zhengwentouyin2"
-                      onclick="window.open('https://note.youdao.com/', '_blank');">有道云笔记</button>
-                      
-                  <button class="custom-btn btn-16 zhengwentouyin2"
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('https://vercel.com/', '_blank');">Vercel</button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('https://gemini.chat4ai.top/', '_blank');">Gemini</button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('https://note.youdao.com/', '_blank');">有道云笔记</button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
                   onclick="window.open('/樱花背景源码/', '_blank');">背景原作预览</a>
 
               </div>
@@ -214,7 +214,7 @@
         <aside class="profile-image">
           <img src="static/picture/caticon.gif" alt="喵">
         </aside>
-      </div>
+
 
       <!-- 微信按钮弹窗的内容 -->
       <dialog id="popup">
@@ -413,7 +413,7 @@ void main(void) {
 }
 </script>
 
-  <!-- 可以在col = mix(vec3处更改樱花界面背景颜色
+  <!-- 可以在col = mix(vec3处更改网页整体的背景颜色
 原始代码为col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);-->
 
 
@@ -548,27 +548,27 @@ void main(void) {
     }
 
     function copyWechatID() {
-		// 获取要复制的文本
-		var textToCopy = "Yorufuu";
+      // 获取要复制的文本
+      var textToCopy = "Yorufuu";
 
-		// 检查浏览器是否支持 navigator.clipboard API
-		if (navigator.clipboard) {
-		  // 浏览器支持 navigator.clipboard API
+      // 检查浏览器是否支持 navigator.clipboard API
+      if (navigator.clipboard) {
+        // 浏览器支持 navigator.clipboard API
 
-		  // 使用 navigator.clipboard.writeText() 方法复制文本到剪贴板
-		  navigator.clipboard.writeText(textToCopy).then(function() {
-			// 成功复制文本到剪贴板
-			alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
+        // 使用 navigator.clipboard.writeText() 方法复制文本到剪贴板
+        navigator.clipboard.writeText(textToCopy).then(function () {
+          // 成功复制文本到剪贴板
+          alert("已经复制好微信号啦，点击确定后将跳转到微信^_^/");
 
-			// 跳转到微信
-			window.location.href = "weixin://";
-		  }, function() {
-			// 复制文本到剪贴板失败
-			alert("复制微信号失败，请重试！");
-		  });
-		} else {
-		  // 浏览器不支持 navigator.clipboard API，您需要使用其他方法来复制文本
-		}
+          // 跳转到微信
+          window.location.href = "weixin://";
+        }, function () {
+          // 复制文本到剪贴板失败
+          alert("复制微信号失败，请重试！");
+        });
+      } else {
+        // 浏览器不支持 navigator.clipboard API，您需要使用其他方法来复制文本
+      }
     }
   </script>
   <!-- 微信弹窗👆 -->

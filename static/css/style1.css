@@ -83,6 +83,8 @@
 .zhengwen{
   white-space: wrap;
   text-indent: 2em;
+  /* 设置正文行高 */
+  line-height: 22px;
 }
 
 
@@ -251,7 +253,7 @@ nav .indicator {
 .title h3 {
   color: var(--fubiaoti-text-color);
   text-shadow: 1px 1px 1px #8b8b8bdd;
-  margin: 0px 0 12px 0;
+  margin: 0px 0 8px 0;
   font-size: 15px;
   /* 设置文字斜体，但我做的模拟打字动画效果自带倾斜了，所以隐藏掉字体的斜体效果
   font-style: italic; */

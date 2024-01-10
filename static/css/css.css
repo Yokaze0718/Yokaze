@@ -4,9 +4,22 @@
   /* 字体路径 */
   src: url('../font/OPlusSans3-Bold.ttf');
 }
-head{
+
+head {
   font-family: '字体';
 }
+
 body {
   font-family: '字体';
+
+  /* 设置页面鼠标指针样式 */
+  cursor: url("../zhizhen/zhizhen1.ico"), default;
+}
+
+/* 指针悬浮在连接或者按钮时 */
+.btn-16:hover{
+  cursor: url("../zhizhen/zhizhen2.ico"), default;
+}
+a:hover {
+  cursor: url("../zhizhen/zhizhen2.ico"), default;
 }
